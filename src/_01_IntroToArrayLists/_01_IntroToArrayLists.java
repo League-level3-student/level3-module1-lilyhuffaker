@@ -10,7 +10,7 @@ public class _01_IntroToArrayLists {
 		//2. Add five Strings to your list
 		array.add("Pineapple on pizza is bad");
 		array.add("Pepper has pp in it");
-		array.add("This is the third string");
+		array.add("poo");
 		array.add("all music genres are valid exept for country");
 		array.add("Chiaki is best girl");
 		//3. Print all the Strings using a standard for-loop
@@ -40,7 +40,10 @@ public class _01_IntroToArrayLists {
 		//7. Print only the Strings that have the letter 'e' in them.
 		System.out.println("Step 7");
 		for(int i = 0; i < array.size(); i++) {
-			//if() FINISH IF STATEMENT
+			if(array.get(i).contains("e")) {
+				String s = array.get(i);
+				System.out.println(s);
+			}
 		}
 	}
 }
