@@ -1,5 +1,6 @@
 package _01_IntroToArrayLists;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -16,7 +17,7 @@ public class _05_LongChipCompetition {
 
 	public static void main(String[] args) {
 		_05_LongChipCompetition lcc = new _05_LongChipCompetition();
-		
+		lcc.longestChip();
 	}
 	
 	private void initializeBeatles() {
@@ -33,6 +34,21 @@ public class _05_LongChipCompetition {
 	public ArrayList<Beatle> getTheBand(){
 		return theBeatles;
 	}
+	public void longestChip() {
+		initializeBeatles();
+		double theChip = 0;
+		String n = "";
+		for(int i = 0; i < getTheBand().size();i++) {
+			Beatle b = getTheBand().get(i);
+			for(Chip c: b.getChips()) {
+			if(c.getLength() > theChip) {
+				theChip = c.getLength();
+				n = b.getName();
+			}
+		}
+	}
+		System.out.println(n + " has the longest chip!");
+}
 }
 
 class Beatle {
