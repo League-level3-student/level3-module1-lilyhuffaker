@@ -66,8 +66,9 @@ public class _06_IPodShuffle implements ActionListener{
 			System.out.println("song "+which+" is playing");
 		}
 		if(buttonClicked == stopSong) {
-			theBoys.get(which).stop();
-			System.out.println("song "+which+" has stopped");
+			for(int i = 0; i < theBoys.size(); i++) {
+				theBoys.get(i).stop();
+			}
 		}
 	}
 }
