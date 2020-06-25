@@ -23,13 +23,15 @@ public class _01_IntroToStack {
 		//4. Pop all the elements off of the Stack. Every time a double is popped that is
 		//   between the two numbers entered by the user, print it to the screen.
 		int sz = s.size();
+		double d = s.pop();
 		for(int i = 0; i < sz; i++) {
-			if(s.get(i) > a1 && s.get(i) < a2) {
-				//System.out.println(s.pop()+" is cool");
+			if(d > a1 && d < a2) {
+				System.out.println(d+" is cool");
 			}
-			System.out.println(s.pop());
+			System.out.println(d);
 		}
-		
+		//COME BACK TO THIS ONE LATER
+		//ADD MORE IF STATEMENTS 
 		
 		//   EXAMPLE:
 		//   NUM 1: 65
