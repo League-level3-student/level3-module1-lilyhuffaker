@@ -27,6 +27,7 @@ public class _02_TextUndoRedo implements KeyListener {
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JLabel label = new JLabel();
+	int labelSize = 0;
 	
 	char back = undo();
 	Stack<Character> character = new Stack<Character>();
@@ -51,15 +52,19 @@ public class _02_TextUndoRedo implements KeyListener {
 	public void keyTyped(KeyEvent e) {
 		//PUSH THE CHAR ONTO THE LABEL ALSO WTF WHY ARE U SO LAZY
 		char letter = e.getKeyChar();
-		character.push(letter);
 		String text = label.getText();
-		label.setText(" ");
-		label.setText(label.getText() + character);
-		
 		// TODO Auto-generated method stub
 		if(e.getKeyChar() == back) {
-			label.setText(text);
+			//label.setText(text);
 			///FIX THIS
+			label.setText(text);
+			
+		}
+		else {
+			character.push(letter);
+			label.setText(" ");
+			label.setText(label.getText() + character);
+			labelSize++;
 		}
 	} 
 
